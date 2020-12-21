@@ -42,7 +42,8 @@ if ($ADMIN->fulltree) {
         'group' => get_string('group'),
         'id' => get_string('id', 'questionnaire'),
         'fullname' => get_string('fullname'),
-        'username' => get_string('username')
+        'username' => get_string('username'),
+        'email' => get_string('email')
     );
 
     $settings->add(new admin_setting_configmultiselect('questionnaire/downloadoptions',

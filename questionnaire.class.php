@@ -2818,7 +2818,7 @@ class questionnaire {
      */
     protected function user_fields() {
         $userfieldsarr = get_all_user_name_fields();
-        $userfieldsarr = array_merge($userfieldsarr, ['username', 'department', 'institution']);
+        $userfieldsarr = array_merge($userfieldsarr, ['username', 'department', 'institution', 'email']);
         return $userfieldsarr;
     }
 
@@ -3003,6 +3003,9 @@ class questionnaire {
         }
         if (in_array('username', $options)) {
             array_push($positioned, $username);
+        }
+        if (in_array('email', $options)) {
+            array_push($positioned, $user->email);
         }
         if (in_array('complete', $options)) {
             array_push($positioned, $resprow->complete);
